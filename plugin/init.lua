@@ -29,6 +29,9 @@ local config = {
       active = { "", ":" },
       inactive = { "", ":" },
     },
+    titles = {
+      ssh = "🔑",
+    },
   },
   clock = {
     enabled = true,
@@ -369,6 +372,7 @@ wezterm.on(
     local tab_title = user_title
         and user_title(default_title, tab, conf, _hover, _max_width)
       or default_title
+
 
     local width = conf.tab_max_width - fillerwidth - 1
     if (#tab_title + fillerwidth) > conf.tab_max_width then
